@@ -1,8 +1,7 @@
-
-
 window.addEventListener('load', () => {
 	initModalEvents ();
 });
+
 
 
 function allowDrop(ev) {
@@ -21,14 +20,13 @@ function drop(ev) {
 	ev.target.children[0].style.margin = "0";
 	ev.target.children[0].style.scale = ".78"; //escalar objeto arrastrado a la caja contenedora 
 	
-	
 	testing();
 
 }
 
 function testing() {
 	var correcto = 1;
-	var pokes = document.getElementsByClassName("planet");
+	var pokes = document.getElementsByClassName("craneo");
 	for (var i = 0; i < pokes.length; i++) {
 		if (pokes[i].getAttribute("name") != pokes[i].parentNode.getAttribute("id")) {
 			correcto = correcto * 0;
@@ -126,3 +124,5 @@ const initModalEvents = () => {
 
 	});
 };
+
+

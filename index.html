@@ -7,34 +7,128 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#fafafa" />
 
-    <title>Boiler</title>
+    <title>Juego infantil</title>
 
     <meta name="description" content="" />
     <link rel="apple-touch-icon" href="./assets/img/icon.png" />
     <link rel="icon" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link href="./assets/css/main.css.map" />
+
+
+    <script src="./app/main.js"></script>
 </head>
 
 <body>
 
-    <canvas id="canvas" width="350" height="350"></canvas>
-
-    <div class="container">
 
 
-        <div class="text">
-            <div class="hour">00:00:00</div>
-            <div class="dayname">Día 0, Mes Año</div>
+
+    <div id="contenedor">
+        <div class="reloj" id="Horas">00</div>
+        <div class="reloj" id="Minutos">:00</div>
+        <div class="reloj" id="Segundos">:00</div>
+        <div class="reloj" id="Centesimas">:00</div>
+    </div>
+
+    <div class="enunciado">Ordena los planetas según su cercanía al Sol</div>
+
+    <section id="container">
+        <div class="caja">
+
+
+            <img class="planet" src="assets/img/5 jupiter.png" draggable="true" ondragstart="drag(event)" id="drag1" 
+                name="jupiter" />
+            <img class="planet" src="assets/img/1 mercurio.png" draggable="true" ondragstart="drag(event)" id="drag2"
+                name="mercurio" />
+            <img class="planet" src="assets/img/7 urano.png" draggable="true" ondragstart="drag(event)" id="drag3"
+                name="urano" />
+            <img class="planet" src="assets/img/4 marte.png" draggable="true" ondragstart="drag(event)" id="drag4"
+                name="marte" />
+            <img class="planet" src="assets/img/3 tierra.png" draggable="true" ondragstart="drag(event)" id="drag5"
+                name="tierra" />
+            <img class="planet" src="assets/img/8 neptuno.png" draggable="true" ondragstart="drag(event)" id="drag6"
+                name="neptuno" />
+            <img class="planet" src="assets/img/2 venus.png" draggable="true" ondragstart="drag(event)" id="drag7"
+                name="venus" />
+            <img class="seis" src="assets/img/6 saturno.png" draggable="true" ondragstart="drag(event)" id="drag8"
+                name="saturno" />
         </div>
 
+        <div class="padre">
+            <div class="tipo" id="mercurio" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="venus" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="tierra" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="marte" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="jupiter" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="saturno" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="urano" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="neptuno" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
 
+        <div class="nivel"> Nivel <p>1</p>
+        </div>
+
+        <div class="icon">
+            <img class="pic" src="assets/img/icon.png" alt="">
+        </div>
+
+    </section>
+
+    <div class="footer">
+
+
+        <div class="boton">
+
+            <a href="inicio.html" class="btn">
+                <span class="label">Inicio menú</span>
+                <span class="fa fa-times"></span>
+            </a>
+
+            <div id="resultado">...</div>
+
+            <div class="listo">
+                <a href="#" class="btn">
+                    <span class="label">Hecho</span>
+                    <span class="fa fa-check"></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal_pop">
+
+        <div class="modal_overlay"></div>
+
+        <div class="modal_holder">
+            <div class="modal_header"> Aprende  + </div>
+            <div class="modal_body">
+
+                <div class="pop">
+
+                    <div class="pop_body_write">
+                        En el año 2006, la Unión Astronómica Internacional reclasificó a Plutón
+                        como planeta enano retirándole su estatus anterior de planeta.
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="pie">
+                <a href="level2.html" class="btn">Siguiente nivel</a>
+            </div>
+
+
+
+        </div>
     </div>
 
 
 
 
-    <script src="./app/main.js"></script>
+
 </body>
 
 </html>

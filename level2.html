@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <title>Juego infantil</title>
+
+    <meta name="description" content="" />
+    <link rel="apple-touch-icon" href="./assets/img/icon.png" />
+    <link rel="icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/level2.css" />
+    <link href="./assets/css/level2.css.map" />
+
+
+    <script src="./app/level2.js"></script>
+</head>
+
+<body>
+
+
+
+    <div id="contenedor">
+        <div class="reloj" id="Horas">00</div>
+        <div class="reloj" id="Minutos">:00</div>
+        <div class="reloj" id="Segundos">:00</div>
+        <div class="reloj" id="Centesimas">:00</div>
+    </div>
+
+    <div class="enunciado">Ordena los cráneos evolutivamente desde el más antiguo</div>
+
+    <section id="container">
+        <div class="caja">
+
+
+            <img class="craneo" src="assets/img/e sapiens.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                name="sapiens" />
+            <img class="craneo" src="assets/img/a australophitecus.png" draggable="true" ondragstart="drag(event)"
+                id="drag2" name="australophitecus" />
+            <img class="craneo" src="assets/img/b habilis.png" draggable="true" ondragstart="drag(event)" id="drag3"
+                name="habilis" />
+            <img class="craneo" src="assets/img/d neanderthalensis.png" draggable="true" ondragstart="drag(event)"
+                id="drag4" name="neanderthalensis" />
+            <img class="craneo" src="assets/img/c erectus.png" draggable="true" ondragstart="drag(event)" id="drag5"
+                name="erectus" />
+
+        </div>
+
+        <div class="padre">
+            <div class="tipo" id="australophitecus" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="habilis" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="erectus" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="neanderthalensis" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="tipo" id="sapiens" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        </div>
+
+        <div class="nivel"> Nivel <p>2</p>
+        </div>
+
+        <div class="icon">
+            <img class="pic" src="assets/img/icon2.png" alt="">
+        </div>
+
+    </section>
+
+    <div class="footer">
+
+
+        <div class="boton">
+
+            <a href="inicio.html" class="btn">
+                <span class="label">Inicio menú</span>
+                <span class="fa fa-times"></span>
+            </a>
+
+            <div id="resultado">...</div>
+
+            <div class="listo">
+
+                <a href="#" class="btn">
+                    <span class="label">Hecho</span>
+                    <span class="fa fa-check"></span>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal_pop">
+
+        <div class="modal_overlay"></div>
+
+        <div class="modal_holder">
+            <div class="modal_header"> Aprende + </div>
+            <div class="modal_body">
+
+                <div class="pop">
+
+                    <div class="pop_body_write">
+                        En 1974 fueron recuperados en Etiopía restos de un "Austrolopithecus afarensis", de 3.18 millones de años. 
+                        "Lucy", el esqueleto de hembra más icónico y uno de los más antiguos del mundo.
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="pie">
+                <a href="index.html" class="btn">Siguiente nivel</a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
